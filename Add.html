@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+    
+ 
+    
+  </head>
+  <body>
+
+    <a href = "index.html">Go Back</a>
+    <h1>Welcome To Addition World</h1>
+    <div id="divContain">
+
+
+    </div>
+    <script>
+
+        var num1 = parseInt(prompt('Give me a number to add.'));
+        var num2 = parseInt(prompt('Another number?'));
+        var result = num1 + num2;
+
+        addhtmlToRoot("h1", `${num1} + ${num2} = ${result} we are able to add variables!`);
+
+      function addhtmlToRoot(element, textValue){
+        var elem = document.createElement(element);
+        elem.textContent = textValue;
+        document.getElementById("divContain").appendChild(elem);
+      }
+
+    </script>
+  </body>
+</html>
